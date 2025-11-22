@@ -731,6 +731,32 @@ textarea {
     font-size: 0.95rem;
 }
 
+
+#contact .message {
+    color: white;
+    background-color: #d97706;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* smooth hover effect */
+    padding: 0 15px; /* optional spacing */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+#contact .message:hover {
+    color: #d97706;
+    background: white;
+    border: 1px solid #d97706;
+    transform: scale(1.00); /* slight zoom */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* subtle shadow */
+    font-weight: 700;
+}
+
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border);
