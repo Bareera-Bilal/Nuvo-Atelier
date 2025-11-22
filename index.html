@@ -16,13 +16,20 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <!-- <nav class="nav" aria-label="Primary">
+
+
+    <nav class="nav" aria-label="Primary">
         <div class="container nav-inner">
             <div class="brand">
                 <span>Nuvo Atelier</span>
                 <span class="badge" aria-label="Location badge">Srinagar • J&K</span>
             </div>
+
+
+            <!-- Hamburger toggle (only visible on small screens) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+            <!-- Menu links -->
             <div class="menu" role="menubar">
                 <a href="#about" role="menuitem">About</a>
                 <a href="#collections" role="menuitem">Collections</a>
@@ -30,58 +37,11 @@
                 <a href="#services" role="menuitem">Services</a>
                 <a href="#testimonials" role="menuitem">Testimonials</a>
                 <a href="#contact" role="menuitem">Contact</a>
-                <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">Toggle theme</button>
+                <!-- Theme toggle (always visible) -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">Toggle Theme</button>
             </div>
         </div>
-    </nav> -->
-    <!-- <nav class="nav" aria-label="Primary">
-  <div class="container nav-inner">
-    <div class="brand">
-      <span>Nuvo Atelier</span>
-      <span class="badge" aria-label="Location badge">Srinagar • J&K</span>
-    </div>
-    
-    Hamburger toggle button
-    <button class="toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-    
-     Menu links 
-    <div class="menu" role="menubar">
-      <a href="#about" role="menuitem">About</a>
-      <a href="#collections" role="menuitem">Collections</a>
-      <a href="#lookbook" role="menuitem">Lookbook</a>
-      <a href="#services" role="menuitem">Services</a>
-      <a href="#testimonials" role="menuitem">Testimonials</a>
-      <a href="#contact" role="menuitem">Contact</a>
-      <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">Toggle theme</button>
-
-    </div>
-  </div>
-</nav> -->
-
-<nav class="nav" aria-label="Primary">
-  <div class="container nav-inner">
-    <div class="brand">
-      <span>Nuvo Atelier</span>
-      <span class="badge" aria-label="Location badge">Srinagar • J&K</span>
-    </div>
-
-
-    <!-- Hamburger toggle (only visible on small screens) -->
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-
-    <!-- Menu links -->
-    <div class="menu" role="menubar">
-      <a href="#about" role="menuitem">About</a>
-      <a href="#collections" role="menuitem">Collections</a>
-      <a href="#lookbook" role="menuitem">Lookbook</a>
-      <a href="#services" role="menuitem">Services</a>
-      <a href="#testimonials" role="menuitem">Testimonials</a>
-      <a href="#contact" role="menuitem">Contact</a>
-      <!-- Theme toggle (always visible) -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">Toggle Theme</button>
-    </div>
-  </div>
-</nav>
+    </nav>
 
     <!-- Hero -->
     <header class="hero">
@@ -168,25 +128,7 @@
 
             </div>
 
-            <!-- <div class="aboutbio" aria-label="Quick details">
-                <div class="block" data-animate>
-                    <div class="label">Signature</div>
-                    <div>Hand embroidery, structured drapes, minimal palettes with amber and emerald accents.</div>
-                </div>
-                <div class="block" data-animate>
-                    <div class="label">Sizes</div>
-                    <div>Custom couture and standard ready-to-wear across inclusive size ranges.</div>
-                </div>
-                <div class="block" data-animate>
-                    <div class="label">Turnaround</div>
-                    <div>Capsules: 2–4 weeks • Couture: 6–10 weeks depending on detail and fittings.</div>
-                </div>
-                <div class="block" data-animate>
-                    <div class="label">Location</div>
-                    <div>Chattabal, Srinagar • Remote consultations available.</div>
-                </div>
 
-            </div> -->
         </div>
     </section>
 
@@ -197,14 +139,7 @@
             <p class="sub" data-animate>Selected works—bridal couture, capsule editions, and runway concepts.</p>
             <div class="grid">
 
-                <!-- <article class="card" data-animate>
-                    <div class="cover" aria-hidden="true">Bridal silhouettes</div>
-                    <div class="content">
-                        <span class="chip">Couture</span>
-                        <h3>Bridal couture</h3>
-                        <p>Fine embroidery, layered textures, and tailored drapes—crafted for ceremony and memory.</p>
-                    </div>
-                </article> -->
+
                 <article class="card" data-animate>
                     <div class="cover" aria-hidden="true">
                         <img src="1.jpg" alt="Bridal silhouettes" />
@@ -216,15 +151,7 @@
                     </div>
                 </article>
 
-                <!-- <article class="card" data-animate>
-                    <div class="cover" aria-hidden="true">Emerald capsule</div>
-                    <div class="content">
-                        <span class="chip">Capsule</span>
-                        <h3>Emerald capsule</h3>
-                        <p>Minimal silhouettes with emerald accents; limited run pieces focused on movement and ease.
-                        </p>
-                    </div>
-                </article> -->
+
                 <article class="card" data-animate>
                     <div class="cover" aria-hidden="true">
                         <img src="2.jpg" alt="Bridal silhouettes" />
@@ -340,7 +267,9 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+
+
+    <!-- Testimonials  -->
     <section id="testimonials">
         <div class="container">
             <h2 data-animate>Testimonials</h2>
@@ -353,6 +282,7 @@
                         <p class="cite">— S. Mir, Bride</p>
                     </div>
                 </div>
+
                 <div class="card" data-animate>
                     <div class="content">
                         <blockquote>“Structured yet fluid. The capsule became my go-to wardrobe—effortless to style.”
@@ -360,9 +290,62 @@
                         <p class="cite">— A. Khan, Creative Director</p>
                     </div>
                 </div>
+
+                <div class="card" data-animate>
+                    <div class="content">
+                        <blockquote>“Structured yet fluid. The capsule became my go-to wardrobe—effortless to style.”
+                        </blockquote>
+                        <p class="cite">— MA. Khan, Creative Director</p>
+                    </div>
+                </div>
+
+                <div class="card" data-animate>
+                    <div class="content">
+                        <blockquote>“Structured yet fluid. The capsule became my go-to wardrobe—effortless to style.”
+                        </blockquote>
+                        <p class="cite">— MA. Khan, Creative Director</p>
+                    </div>
+                </div>
+
+                <div class="card" data-animate>
+                    <div class="content">
+                        <blockquote>“Structured yet fluid. The capsule became my go-to wardrobe—effortless to style.”
+                        </blockquote>
+                        <p class="cite">— MA. Khan, Creative Director</p>
+                    </div>
+                </div>
+
+                <div class="card" data-animate>
+                    <div class="content">
+                        <blockquote>“Structured yet fluid. The capsule became my go-to wardrobe—effortless to style.”
+                        </blockquote>
+                        <p class="cite">— MA. Khan, Creative Director</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('in-view');
+                    }, i * 150); // stagger effect
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    </script>
+
+
+
+
+
 
 
     <!-- Contact -->
@@ -383,51 +366,52 @@
             </form>
         </div>
     </section> -->
-   <section id="contact">
-  <div class="container">
-    <h2 data-animate>Contact</h2>
-    <p class="sub" data-animate>
-      Share your vision—I'll reply within 24 hours with next steps.
-    </p>
-    <form id="contact-form" aria-label="Contact form" data-animate>
-      <label for="name">Your name</label>
-      <input id="name" type="text" name="name" placeholder="Your name" required />
+    <section id="contact">
+        <div class="container">
+            <h2 data-animate>Contact</h2>
+            <p class="sub" data-animate>
+                Share your vision—I'll reply within 24 hours with next steps.
+            </p>
+            <form id="contact-form" aria-label="Contact form" data-animate>
+                <label for="name">Your name</label>
+                <input id="name" type="text" name="name" placeholder="Your name" required />
 
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" placeholder="Email" required />
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Email" required />
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Tell me about the piece or collection you have in mind" required></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message"
+                    placeholder="Tell me about the piece or collection you have in mind" required></textarea>
 
-      <button class="btn btn-primary" type="submit">Send message</button>
-      <p class="form-note">Or email: nuvo-atelier@gmail.com</p>
-    </form>
-  </div>
-</section>
+                <button class="btn btn-primary" type="submit">Send message</button>
+                <p class="form-note">Or email: nuvo-atelier@gmail.com</p>
+            </form>
+        </div>
+    </section>
 
-<script>
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // stop the page reload
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // stop the page reload
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
 
-    // Replace with your WhatsApp number (country code first, no + or spaces)
-    const phoneNumber = "919149865535";  
+            // Replace with your WhatsApp number (country code first, no + or spaces)
+            const phoneNumber = "919149865535";
 
-    // Encode the text so spaces/newlines work
-    const text = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-    );
+            // Encode the text so spaces/newlines work
+            const text = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+            );
 
-    // WhatsApp Click-to-Chat link
-    const url = `https://wa.me/${phoneNumber}?text=${text}`;
+            // WhatsApp Click-to-Chat link
+            const url = `https://wa.me/${phoneNumber}?text=${text}`;
 
-    // Redirect user to WhatsApp
-    window.location.href = url;
-  });
-</script>
+            // Redirect user to WhatsApp
+            window.location.href = url;
+        });
+    </script>
 
 
 
@@ -541,23 +525,23 @@ toggleBtn.addEventListener('click', () => {
 
     </script> -->
 
-<script>
-    const menuToggle = document.getElementById('menuToggle');
-const menu = document.querySelector('.menu');
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.querySelector('.menu');
 
-menuToggle.addEventListener('click', (e) => {
-  e.stopPropagation(); // prevent click from bubbling to document
-  menu.classList.toggle('active');
-});
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // prevent click from bubbling to document
+            menu.classList.toggle('active');
+        });
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-  if (!menu.contains(e.target) && e.target !== menuToggle) {
-    menu.classList.remove('active');
-  }
-});
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && e.target !== menuToggle) {
+                menu.classList.remove('active');
+            }
+        });
 
-</script>
+    </script>
 
 </body>
 

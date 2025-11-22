@@ -66,6 +66,7 @@ img {
     background: rgba(255, 255, 255, 0.85);
     border-bottom: 1px solid var(--border);
     z-index: 50;
+    height: 90px;
 }
 
 [data-theme="dark"] .nav {
@@ -76,31 +77,31 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 0;
+    padding: 25px 0;
 }
 
 
 
 /* Theme toggle should always show */
 .theme-toggle {
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-  padding: 8px 12px;
-  border-radius: 10px;
-  cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 /* Hamburger toggle only on small screens */
 .menu-toggle {
-  display: none;
+    display: none;
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    font-size: 1.2rem;
-  }
+    .menu-toggle {
+        display: block;
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -115,6 +116,8 @@ img {
     font-weight: 600;
     letter-spacing: 0.02em;
     font-family: 'Playfair Display', serif;
+    margin-left: -120px;
+    font-size: 1.5rem;
 }
 
 .badge {
@@ -128,10 +131,11 @@ img {
     border: 1px solid var(--border);
 }
 
-.menu {
+/* .menu {
     display: flex;
-    gap: 16px;
-    align-items: center;
+    gap: 14px;
+    align-items: right;
+    margin-right: -35px;
 }
 
 .menu a {
@@ -141,10 +145,43 @@ img {
 
 .menu a:hover {
     background: var(--card);
+    text-decoration: underline;
+} */
+ 
+.menu {
+    display: flex;
+    gap: 14px;
+    align-items: center; /* use center or flex-end */
+    margin-right: -35px;
 }
 
+.menu a {
+    position: relative; /* needed for ::after */
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--text);
+    font-weight: 500;
+    text-decoration: none; /* remove default underline */
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* sits at text baseline */
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent); /* your brand accent color */
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%; /* expands underline from left to right */
+}
+
+
 .toggle {
-    border: 1px solid var(--border);
+    border: 1px solid var(--accent);
     background: var(--card);
     color: var(--text);
     padding: 8px 12px;
@@ -153,48 +190,84 @@ img {
 }
 
 
+
+.theme-toggle {
+  background: linear-gradient(100deg, #d97706);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.theme-toggle:focus {
+  /* outline: 2px solid #10b981;    */
+  outline-offset: 3px;
+}
+
+
 /* Keep your existing styles */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .menu {
-    display: none; /* hide menu links initially */
-    flex-direction: column;
-    gap: 12px;
-    position: absolute;
-    top: 60px; /* adjust based on header height */
-    right: 20px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 16px;
-    border-radius: 10px;
-    z-index: 1000;
-  }
+    .menu {
+        display: none;
+        /* hide menu links initially */
+        flex-direction: column;
+        gap: 12px;
+        position: absolute;
+        top: 60px;
+        /* adjust based on header height */
+        right: 20px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 16px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
 
-  .menu.active {
-    display: flex; /* show when hamburger clicked */
-  }
+    .menu.active {
+        display: flex;
+        /* show when hamburger clicked */
+    }
 
-  .toggle {
-    display: block; /* show hamburger on small screens */
-    font-size: 1.2rem;
-  }
+    .toggle {
+        display: block;
+        /* show hamburger on small screens */
+        font-size: 1.2rem;
+    }
 }
 
 /* On larger screens, keep menu visible and hide hamburger */
 @media (min-width: 769px) {
-  .menu {
-    display: flex;
-  }
-  .toggle {
-    display: none;
-  }
+    .menu {
+        display: flex;
+    }
+
+    .toggle {
+        display: none;
+    }
 }
 
 /* Center brand always */
 .brand {
-  flex: 1;
-  justify-content: center;
+    flex: 1;
+    justify-content: center;
 }
 
 
@@ -221,9 +294,21 @@ img {
 header.hero {
     padding: 96px 0 64px;
     background:
-        radial-gradient(900px 400px at 15% 0%, rgba(217, 119, 6, 0.12), transparent 60%),
-        radial-gradient(900px 400px at 85% 20%, rgba(16, 185, 129, 0.12), transparent 60%);
+        radial-gradient(900px 400px at 15% 0%, rgba(217, 119, 6, 0.15), transparent 100%),
+        radial-gradient(900px 400px at 85% 20%, rgba(16, 185, 129, 0.15), transparent 100%);
+  
+
 }
+/* header.hero {
+  padding: 96px 0 64px;
+  height: 600px;
+  background:
+    radial-gradient(900px 400px at 15% 0%, rgba(217, 119, 6, 0.12), transparent 60%),
+    radial-gradient(900px 400px at 85% 20%, rgba(16, 185, 129, 0.12), transparent 60%),
+   
+  
+} */
+
 
 .hero-content {
     display: grid;
@@ -374,55 +459,57 @@ h2 {
 } */
 
 .aboutbio {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #fafafa;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
-  line-height: 1.6;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    line-height: 1.6;
 }
 
 .aboutbio .block {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
 }
 
 .aboutbio .block:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .aboutbio .block[data-animate].visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .aboutbio .label {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #006644; /* emerald accent */
-  margin-bottom: 0.4rem;
-  position: relative;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #006644;
+    /* emerald accent */
+    margin-bottom: 0.4rem;
+    position: relative;
 }
 
 .aboutbio .label::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #ffbf00; /* amber accent */
-  margin-top: 4px;
-  border-radius: 2px;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #ffbf00;
+    /* amber accent */
+    margin-top: 4px;
+    border-radius: 2px;
 }
 
 .aboutbio .block div:last-child {
-  color: #333;
-  font-size: 0.95rem;
+    color: #333;
+    font-size: 0.95rem;
 }
 
 
@@ -584,7 +671,7 @@ h2 {
 }
 
 /* Testimonials */
-.testimonials {
+ .testimonials {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
@@ -600,7 +687,11 @@ blockquote {
     color: var(--muted);
     font-size: 0.95rem;
     margin-top: 8px;
-}
+} 
+
+
+
+
 
 /* Contact */
 form {
