@@ -92,7 +92,7 @@ img {
     cursor: pointer;
 }
 
-/* Hamburger toggle only on small screens */
+/* Hamburger toggle only on small screens
 .menu-toggle {
     display: none;
 }
@@ -102,11 +102,77 @@ img {
         display: block;
         font-size: 1.2rem;
     }
+} */
+/* Base hamburger toggle */
+/* Base hamburger toggle — hidden by default */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 1100; /* stays above the drawer */
 }
 
+/* Show toggle only on small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
+/* Hover & focus states for accessibility */
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: #d97706;
+  transform: scale(1.1);
+  outline: none;
+}
 
+/* Hamburger icon lines */
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px 0;
+  background: currentColor;
+  transition: all 0.3s ease;
+}
 
+/* Toggle animation when active */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Drawer menu styles */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 400px;
+  background: white;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+
+/* Drawer active state */
+.menu.active {
+  transform: translateX(0);
+}
 
 
 /* .brand {
