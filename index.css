@@ -240,6 +240,12 @@ img {
         border-radius: 10px;
         z-index: 1000;
     }
+    /* Center brand always */
+.brand {
+    flex: 1;
+    justify-content: center;
+}
+
 
     .menu.active {
         display: flex;
@@ -262,13 +268,15 @@ img {
     .toggle {
         display: none;
     }
-}
 
-/* Center brand always */
+    /* Center brand always */
 .brand {
     flex: 1;
     justify-content: center;
 }
+
+}
+
 
 
 
