@@ -109,7 +109,7 @@ img {
 
 
 
-.brand {
+/* .brand {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -118,7 +118,71 @@ img {
     font-family: 'Playfair Display', serif;
     margin-left: -120px;
     font-size: 1.5rem;
+} */
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ensures centering */
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-left: 0; /* remove negative margin */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 16px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .brand {
+        flex: 1;
+        justify-content: center; /* center brand on mobile */
+        text-align: center;      /* extra safeguard */
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu {
+        display: flex;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .brand {
+        flex: 1;
+        justify-content: center; /* keep centered on desktop too */
+    }
+}
+
+
+
+
+
 
 .badge {
     display: inline-flex;
@@ -131,22 +195,6 @@ img {
     border: 1px solid var(--border);
 }
 
-/* .menu {
-    display: flex;
-    gap: 14px;
-    align-items: right;
-    margin-right: -35px;
-}
-
-.menu a {
-    padding: 8px 12px;
-    border-radius: 10px;
-}
-
-.menu a:hover {
-    background: var(--card);
-    text-decoration: underline;
-} */
  
 .menu {
     display: flex;
@@ -224,58 +272,54 @@ img {
 /* Keep your existing styles */
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .menu {
         display: none;
-        /* hide menu links initially */
         flex-direction: column;
         gap: 12px;
         position: absolute;
         top: 60px;
-        /* adjust based on header height */
         right: 20px;
         background: var(--card);
         border: 1px solid var(--border);
         padding: 16px;
         border-radius: 10px;
         z-index: 1000;
-    }
+    } */
     /* Center brand always */
-.brand {
+/* .brand {
     flex: 1;
     justify-content: center;
-}
+} */
 
 
-    .menu.active {
+    /* .menu.active {
         display: flex;
-        /* show when hamburger clicked */
     }
 
     .toggle {
         display: block;
-        /* show hamburger on small screens */
         font-size: 1.2rem;
     }
-}
+} */
 
 /* On larger screens, keep menu visible and hide hamburger */
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
     .menu {
         display: flex;
     }
 
     .toggle {
         display: none;
-    }
+    } */
 
     /* Center brand always */
-.brand {
+/* .brand {
     flex: 1;
     justify-content: center;
 }
 
-}
+} */
 
 
 
